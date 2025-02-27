@@ -22,9 +22,57 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/gen-style.css">
 </head>
 <style>
+
+  /* Unique Certifications Section */
+
+.unique-cert-card {
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 25px;
+    background: #fff;
+}
+
+.unique-cert-card:hover {
+    transform: scale(1.05);
+}
+
+.unique-cert-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Increased height */
+}
+
+.unique-cert-img {
+    width: auto;  
+    max-width: 100%; /* Allow better scaling */
+    max-height: 200px; /* Increased height */
+    object-fit: contain;
+}
+
+.unique-cert-title {
+    font-size: 20px;  /* Slightly increased title size */
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+}
+
+.unique-cert-text {
+    font-size: 15px; /* Increased text size */
+    font-weight: 600;
+    color: #777;
+    text-align: center;
+}
+
+/* Make the entire card clickable */
+.unique-cert-link {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Contact Section */
 #contact-section {
@@ -445,6 +493,7 @@
       <ul class="navbar-nav nav ml-auto">
         <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
         <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+        <li class="nav-item"><a href="#certifications-section" class="nav-link"><span>Certifications</span></a></li>
         <li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
         <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
         <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
@@ -609,6 +658,63 @@
   </div>
 </section>
 
+
+<section class="ftco-section ftco-no-pb" id="certifications-section">
+  <div class="container">
+      <div class="row justify-content-center pb-3">
+          <div class="col-md-10 text-center heading-section ftco-animate">
+              <h1 class="big big-2">Certifications</h1>
+              <h2 class="mb-4">Professional Certifications</h2>
+              <div class="underline"></div>
+          </div>
+      </div>
+
+      <div class="row justify-content-center">
+          <!-- Certification 1 -->
+          <div class="col-md-4">
+              <a href="https://www.credly.com/badges/07e38be4-7538-4610-ae80-a6f2e312030a/public_url" target="_blank" class="unique-cert-link">
+                  <div class="card unique-cert-card ftco-animate text-center">
+                      <div class="unique-cert-img-container">
+                          <img src="images/hashicorp-logo.png" class="unique-cert-img" alt="HashiCorp Terraform Badge">
+                      </div>
+                      <div class="card-body">
+                          <h5 class="unique-cert-title">HashiCorp Certified: Terraform Associate (003)</h5>
+                          <p class="unique-cert-text"><strong>Date Earned:</strong> February 2025</p>
+                      </div>
+                  </div>
+              </a>
+          </div>
+
+          <!-- Certification 2 -->
+          <div class="col-md-4">
+              <a href="https://www.credly.com/badges/c537d230-cb79-4815-9e93-49afc63fbee4/public_url" target="_blank" class="unique-cert-link">
+                  <div class="card unique-cert-card ftco-animate text-center">
+                      <div class="unique-cert-img-container">
+                          <img src="images/google-cloud-logo.png" class="unique-cert-img" alt="Google Cloud Badge">
+                      </div>
+                      <div class="card-body">
+                          <h5 class="unique-cert-title">Google Cloud Certified Professional Cloud Architect</h5>
+                          <p class="unique-cert-text"><strong>Date Earned:</strong> January 2025</p>
+                      </div>
+                  </div>
+              </a>
+          </div>
+
+          <!-- Certification 3 -->
+          <div class="col-md-4">
+              <div class="card unique-cert-card ftco-animate text-center">
+                  <div class="unique-cert-img-container">
+                      <img src="images/oracle-logo.png" class="unique-cert-img" alt="Oracle Cloud Badge">
+                  </div>
+                  <div class="card-body">
+                      <h5 class="unique-cert-title">Oracle Cloud Infrastructure 2023 Certified Associate</h5>
+                      <p class="unique-cert-text"><strong>Date Earned:</strong> July 2024</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
 <section class="ftco-section ftco-no-pb" id="experience-section">
   <div class="container">
