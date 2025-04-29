@@ -72,18 +72,18 @@
               <script>
                 const typingAnimationElement = document.getElementById('typing-animation');
                 const typingTexts = [
-                  'Graduate Assistant'
+                  'AI & Machine Learning', 'Cloud Computing', 'DevOps'
                 ];
                 function playTypingAnimation(text) {
                   for (let i = 0; i < text.length; i++) {
                     setTimeout(() => {
                       typingAnimationElement.textContent += text[i];
-                    }, i * 200);
+                    }, i * 50);
                   }
                   setTimeout(() => {
                     typingAnimationElement.textContent = '';
                     playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                  }, text.length * 200);
+                  }, text.length * 100);
                 }
                 playTypingAnimation(typingTexts[0]);
 
@@ -131,7 +131,7 @@
             <h1 class="big">About</h1>
             <h2 class="mb-4">About Me</h2>
             <p class="about-text">
-              I am a dedicated professional with expertise in Cloud Engineering, DevOps, and Software Engineering,
+              I am a dedicated professional with expertise in Cloud Engineering, DevOps, and AI-ML,
               currently pursuing a Master of Science in Information Technology at the University of Cincinnati. My
               experience includes developing a predictive model with 85% accuracy for heart failure readmissions,
               automating high-severity ticket detection at Amazon, and enhancing deployment efficiency by 40% through a
@@ -362,7 +362,7 @@
             </div>
             <div class="col-md-9">
               <span class="date">January 2022 - November 2022</span>
-              <h2>DevOps Engineer</h2>
+              <h2>Cloud-DevOps Engineer</h2>
               <span class="position">Eduskills Foundation</span>
               <p class="mt-4">
                 EduSkills is a Non-profit organization which enables Industry 4.0 ready digital workforce in India.</p>
@@ -384,7 +384,7 @@
             </div>
             <div class="col-md-9">
               <span class="date">May 2021 - Aug 2021</span>
-              <h2>Summer Intern</h2>
+              <h2>Machine Learning Engineer</h2>
               <span class="position">Linux World Informatics Pvt. Ltd.</span>
               <p class="mt-4">
                 Linux World offers the program of industrial training in Jaipur for those students who have a burning
