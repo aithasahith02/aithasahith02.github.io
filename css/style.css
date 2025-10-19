@@ -9070,6 +9070,34 @@ textarea.form-control {
 .bg-primary {
   background: #ffbd39 !important; }
 
+#about-section .row {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust image container */
+.img-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.img-about img {
+  width: 100%;
+  max-width: 600px; 
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.img-about .overlay {
+  position: static;
+  background: none;
+  height: auto;
+}
+
 .about-author {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
