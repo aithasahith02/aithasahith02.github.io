@@ -1,694 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Sahith Aitha Portfolio</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sahith Aitha · MLOps Engineer</title>
+  <meta name="description" content="Sahith Aitha is an MLOps engineer who builds and deploys production machine learning systems: survival and risk models, data pipelines, cloud infrastructure and automation.">
+  <meta name="theme-color" content="#e8ecef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b121d" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://sahithaitha.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sahithaitha.com/">
+  <meta property="og:title" content="Sahith Aitha · MLOps Engineer">
+  <meta property="og:description" content="I build ML systems that hold up in production.">
+  <meta property="og:image" content="https://sahithaitha.com/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-
-  <link rel="stylesheet" href="css/aos.css">
-
-  <link rel="stylesheet" href="css/ionicons.min.css">
-
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/gen.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Onest:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+  <link rel="preload" as="image" href="assets/img/sahith-720.webp" imagesrcset="assets/img/sahith-360.webp 360w, assets/img/sahith-720.webp 720w" imagesizes="(max-width: 860px) 320px, 380px" type="image/webp">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/fx.css"><!-- optional effects add-on: delete this line and fx.js to remove -->
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    document.documentElement.classList.add('js');
+  </script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/fx.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sahith Aitha",
+    "jobTitle": "MLOps Engineer",
+    "url": "https://sahithaitha.com/",
+    "email": "mailto:aithasahith0214@gmail.com",
+    "sameAs": ["https://github.com/aithasahith02", "https://www.linkedin.com/in/sahith-aitha-845887191/", "https://www.credly.com/users/sahith-aitha"]
+  }
+  </script>
 </head>
-<style>
 
-  /* Unique Certifications Section */
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
 
-
-</style>
-<br data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Sahith Aitha</a>
-    <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-      data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="oi oi-menu"></span> Menu
-    </button>
-    <div class="collapse navbar-collapse" id="ftco-nav">
-      <ul class="navbar-nav nav ml-auto">
-        <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-        <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-        <li class="nav-item"><a href="#certifications-section" class="nav-link"><span>Certifications</span></a></li>
-        <li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
-        <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-        <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
-        <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-      </ul>
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar-in">
+      <a class="logo" href="#home" aria-label="Sahith Aitha, back to top"><i aria-hidden="true"></i><span>sahith aitha</span></a>
+      <p class="where" aria-hidden="true"><span id="whereNum">01</span><span id="whereName">Home</span></p>
+      <div class="top-actions">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to dark theme">
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">
+          <span class="menu-lines" aria-hidden="true"><i></i><i></i></span><span>Menu</span>
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
-<br>
-<section id="home-section" class="hero">
-  <div class="home-slider  owl-carousel">
-    <div class="slider-item ">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
-          data-scrollax-parent="true">
-          <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/DP.png);">
+  </header>
 
-            <div class="overlay"></div>
+  <dialog class="menu" id="menu" aria-label="Site menu">
+    <div class="wrap menu-in">
+      <div class="menu-top">
+        <span class="logo"><i aria-hidden="true"></i><span>sahith aitha</span></span>
+        <button class="menu-btn is-open" id="menuClose" type="button"><span class="menu-lines" aria-hidden="true"><i></i><i></i></span><span>Close</span></button>
+      </div>
+      <nav class="menu-nav" aria-label="Sections">
+        <ol>
+          <li><a href="#home"><span>01</span>Home</a></li>
+          <li><a href="#about"><span>02</span>About</a></li>
+          <li><a href="#skills"><span>03</span>Skills</a></li>
+          <li><a href="#certifications"><span>04</span>Certifications</a></li>
+          <li><a href="#experience"><span>05</span>Experience</a></li>
+          <li><a href="#education"><span>06</span>Education</a></li>
+          <li><a href="#projects"><span>07</span>Projects</a></li>
+          <li><a href="#contact"><span>08</span>Contact</a></li>
+        </ol>
+      </nav>
+      <div class="menu-foot">
+        <a href="mailto:aithasahith0214@gmail.com">aithasahith0214@gmail.com</a>
+        <span class="menu-social">
+          <a href="https://github.com/aithasahith02" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/sahith-aitha-845887191/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.credly.com/users/sahith-aitha" target="_blank" rel="noopener">Credly</a>
+          <a href="Resume-SA_MLOps.pdf" download>Resume</a>
+        </span>
+      </div>
+    </div>
+  </dialog>
+
+  <main id="main">
+    <!-- 01 · Home -->
+    <section class="hero" id="home" data-name="Home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-in" style="--d:0"><span class="status-dot" aria-hidden="true"></span>MLOps Engineer · California, USA</p>
+          <h1 class="hero-name">
+            <span class="line"><span class="hero-in" style="--d:1">Sahith</span></span>
+            <span class="line accent"><span class="hero-in" style="--d:2">Aitha.</span></span>
+          </h1>
+          <p class="hero-role hero-in" style="--d:3">
+            I build
+            <span class="rotator" aria-hidden="true"><span class="rot-track" id="rot"><span>ML systems</span><span>data pipelines</span><span>cloud platforms</span><span>AI workflows</span><span>ML systems</span></span></span>
+            <span class="sr-only">ML systems, data pipelines, cloud platforms and AI workflows</span>
+            that hold up in production.
+          </p>
+          <p class="hero-cred hero-in" style="--d:4">HashiCorp Certified Terraform Associate &amp; Google Cloud Professional Cloud Architect</p>
+          <div class="hero-links hero-in" style="--d:5">
+            <a class="btn btn-solid" href="#projects">See my work <span aria-hidden="true">→</span></a>
+            <a class="btn" href="Resume-SA_MLOps.pdf" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>Resume
+            </a>
+            <a class="btn btn-icon" href="https://github.com/aithasahith02" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+            <a class="btn btn-icon" href="https://www.linkedin.com/in/sahith-aitha-845887191/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.83v1.54h.06c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.13V21h-4v-4.97c0-1.19-.02-2.71-1.65-2.71-1.65 0-1.9 1.29-1.9 2.62V21h-4V9.75Z"/></svg>
+            </a>
+            <a class="btn btn-icon" href="https://www.credly.com/users/sahith-aitha" target="_blank" rel="noopener" aria-label="Credly badges">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg>
+            </a>
           </div>
-          <div class="one-forth d-flex  align-items-center ftco-animate"
-            data-scrollax=" properties: { translateY: '70%' }">
-            <div class="text">
-              <span class="subheading">Hello!</span>
-              <h1 class="mb-4 mt-3">I am <span>Sahith Aitha</span></h1>
-              <span id="typing-animation"></span>
-              <script>
-                const typingAnimationElement = document.getElementById('typing-animation');
-                const typingTexts = [
-                  'AI & Machine Learning', 'Cloud Computing', 'DevOps'
-                ];
-                function playTypingAnimation(text) {
-                  for (let i = 0; i < text.length; i++) {
-                    setTimeout(() => {
-                      typingAnimationElement.textContent += text[i];
-                    }, i * 50);
-                  }
-                  setTimeout(() => {
-                    typingAnimationElement.textContent = '';
-                    playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                  }, text.length * 100);
-                }
-                playTypingAnimation(typingTexts[0]);
+        </div>
 
-              </script>
-              <br>
-              <h4>Certified Terraform Associate & Professional Cloud Architect</h4>
-              <p>
-                <a href="https://www.linkedin.com/in/sahith-aitha-845887191/" target="_blank"
-                  class="btn btn-primary py-3 px-4">Linkedln</a>
-                <a href="https://github.com/aithasahith02" class="btn btn-white btn-outline-white py-3 px-4"
-                  target="_blank">My Repository</a>
-                <a href="Resume-SA_MLOps.pdf" download="Resume-SA_MLOps.pdf" class="btn btn-primary py-3 px-4" target="_blank"
-                  onclick="downloadAlert()">Resume </a>
-                <script>
-                  function downloadAlert() {
-                    alert("Your resume has been downloaded successfully!");
-                  }
-                </script>
-              </p>
+        <div class="hero-visual hero-in" style="--d:2">
+          <div class="blob" aria-hidden="true"><span></span></div>
+          <figure class="portrait">
+            <img src="assets/img/sahith-720.webp" srcset="assets/img/sahith-360.webp 360w, assets/img/sahith-720.webp 720w" sizes="(max-width: 860px) 320px, 380px" width="720" height="900" alt="Portrait of Sahith Aitha" fetchpriority="high">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · About -->
+    <section class="section" id="about" data-name="About">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="sec-num">02</p>
+          <h2>About me</h2>
+        </header>
+        <div class="about-grid">
+          <blockquote class="about-quote reveal">
+            <p>I build ML systems that hold up in production: messy data, strict reliability bars, real decisions on the line.</p>
+          </blockquote>
+          <div class="about-body reveal">
+            <p>I'm an MLOps engineer who likes the unglamorous middle of machine learning. That's the part between a promising notebook and a model people can actually depend on. I've built survival and risk models for healthcare, heart-failure readmission models in research, cloud automation at Amazon, and the Linux and DevOps foundations underneath all of it.</p>
+            <p>Along the way I've published three peer-reviewed papers, serve on the Program Committee for ICTAI 2026, and won the 2026 Preston Ventures AI Hackathon with a Claude-powered agent system on AWS Bedrock. I work AI-augmented with Claude Code, and the judgment calls stay mine.</p>
+            <p class="about-excite">What excites me: AI systems that do real work reliably. Agents with clear verifiers, and pipelines that don't page you at 3am.</p>
+          </div>
+        </div>
+        <ul class="facts reveal" aria-label="Highlights">
+          <li><strong>3</strong><span>peer-reviewed papers</span></li>
+          <li><strong>3</strong><span>cloud &amp; IaC certifications</span></li>
+          <li><strong>12</strong><span>projects built</span></li>
+          <li><strong>1st</strong><span>AI Hackathon 2026</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 03 · Skills -->
+    <section class="section" id="skills" data-name="Skills">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="sec-num">03</p>
+          <h2>Skills &amp; technologies</h2>
+          <a class="sec-link" href="https://www.credly.com/users/sahith-aitha" target="_blank" rel="noopener">Verified badges on Credly <span aria-hidden="true">↗</span></a>
+        </header>
+        <div class="stack">
+          <article class="stack-row reveal">
+            <div class="stack-head">
+              <span class="stack-num">01</span>
+              <svg class="stack-ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 9 4 16l7 7M21 9l7 7-7 7M18 6l-4 20"/></svg>
+              <div><h3>Programming</h3><p>Languages and frameworks I ship with</p></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-  <div class="container">
-    <div class="row">
-      <!-- Profile Image Column -->
-      <div class="col-md-4 col-lg-5 d-flex align-items-stretch">
-        <div class="img-about img d-flex align-items-stretch img-fluid rounded-circle b-shadow-a">
-          <div class="overlay">
-            <div class="about-img">
-              <img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Profile Picture">
+            <ul class="stack-tools"><li>Python</li><li>SQL · T-SQL</li><li>Java</li><li>Bash</li><li>REST APIs</li><li>FastAPI</li><li>Flask</li><li>Data structures &amp; algorithms</li></ul>
+          </article>
+          <article class="stack-row reveal">
+            <div class="stack-head">
+              <span class="stack-num">02</span>
+              <svg class="stack-ic" viewBox="0 0 32 32" aria-hidden="true"><circle cx="6" cy="9" r="2.5"/><circle cx="6" cy="23" r="2.5"/><circle cx="16" cy="16" r="2.5"/><circle cx="26" cy="9" r="2.5"/><circle cx="26" cy="23" r="2.5"/><path d="M8.3 10.2 13.7 14.8M8.3 21.8l5.4-4.6M18.3 14.8l5.4-4.6M18.3 17.2l5.4 4.6"/></svg>
+              <div><h3>AI &amp; machine learning</h3><p>Modeling, evaluation and deep learning</p></div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- About Me Column -->
-      <div class="col-md-6 col-lg-7 pl-lg-5 d-flex align-items-center">
-        <div class="row">
-          <div class="col-md-12 heading-section ftco-animate">
-            <h1 class="big">About</h1>
-            <h2 class="mb-4">About Me</h2>
-            <p class="about-text">
-              I’m Sahith Aitha, an MLOps Engineer passionate about building intelligent ML systems that scale seamlessly from research to production. With experience across AWS and GCP, I design automated pipelines that ensure reliability, explainability, and real-time adaptability. My recent work includes deploying survival analysis frameworks in healthcare and developing RL-driven Kubernetes auto-scaling systems that optimize performance while reducing cloud costs. I love creating AI systems that don’t just predict — they evolve.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Subheading Section -->
-    <div class="col-12 text-center">
-      <div class="subheading mt-4">
-        <a href="https://www.credly.com/users/sahith-aitha" target="_blank">
-          <h3>Skills and Technologies</h3>
-        </a>
-        <p>Explore my expertise in various technologies and view my skills <a
-            href="https://www.credly.com/users/sahith-aitha">here<i class="icon-link"></i></a>
-        </p>
-      </div>
-    </div>
-    <!-- Skills and Technologies Cards -->
-    <div class="row mt-4">
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/MLDLLogo.png" class="card-img-top" alt="Machine Learning & Deep Learning Logo">
-          <div class="card-body text-center">
-            <h5 class="card-title">AI & DL</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/DevOpsLogo.jpg" class="card-img-top" alt="DevOps Logo">
-          <div class="card-body text-center">
-            <h5 class="card-title">DevOps</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/CloudLogo.jpg" class="card-img-top" alt="Cloud Computing Logo">
-          <div class="card-body text-center">
-            <h5 class="card-title">Cloud Computing</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/LinuxLogo.png" class="card-img-top" alt="Linux Programming Logo">
-          <div class="card-body text-center">
-            <h5 class="card-title">Linux Programming</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/DBMSLogo.png" class="card-img-top" alt="Database Management Logo">
-          <div class="card-body text-center">
-            <h5 class="card-title">Database</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/ProgrammingLogo.png" class="card-img-top" alt="Programming Logo">
-          <div class="card-body text-center">
-            <h5 class="card-title">Programming</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="ftco-section ftco-no-pb" id="certifications-section">
-  <div class="container">
-      <div class="row justify-content-center pb-3">
-          <div class="col-md-10 text-center heading-section ftco-animate">
-              <h1 class="big big-2">Certifications</h1>
-              <h2 class="mb-4">Professional Certifications</h2>
-              <div class="underline"></div>
-          </div>
-      </div>
-
-      <div class="row justify-content-center">
-          <!-- Certification 1 -->
-          <div class="col-md-4">
-              <a href="https://www.credly.com/badges/07e38be4-7538-4610-ae80-a6f2e312030a/public_url" target="_blank" class="unique-cert-link">
-                  <div class="card unique-cert-card ftco-animate text-center">
-                      <div class="unique-cert-img-container">
-                          <img src="images/hashicorp-logo.png" class="unique-cert-img" alt="HashiCorp Terraform Badge">
-                      </div>
-                      <div class="card-body">
-                          <h5 class="unique-cert-title">HashiCorp Certified: Terraform Associate (003)</h5>
-                          <p class="unique-cert-text"><strong>Date Earned:</strong> February 2025</p>
-                      </div>
-                  </div>
-              </a>
-          </div>
-
-          <!-- Certification 2 -->
-          <div class="col-md-4">
-              <a href="https://www.credly.com/badges/c537d230-cb79-4815-9e93-49afc63fbee4/public_url" target="_blank" class="unique-cert-link">
-                  <div class="card unique-cert-card ftco-animate text-center">
-                      <div class="unique-cert-img-container">
-                          <img src="images/google-cloud-logo.png" class="unique-cert-img" alt="Google Cloud Badge">
-                      </div>
-                      <div class="card-body">
-                          <h5 class="unique-cert-title">Google Cloud Certified Professional Cloud Architect</h5>
-                          <p class="unique-cert-text"><strong>Date Earned:</strong> January 2025</p>
-                      </div>
-                  </div>
-              </a>
-          </div>
-
-          <!-- Certification 3 -->
-          <div class="col-md-4">
-              <div class="card unique-cert-card ftco-animate text-center">
-                  <div class="unique-cert-img-container">
-                      <img src="images/oracle-logo.png" class="unique-cert-img" alt="Oracle Cloud Badge">
-                  </div>
-                  <div class="card-body">
-                      <h5 class="unique-cert-title">Oracle Cloud Infrastructure 2023 Certified Associate</h5>
-                      <p class="unique-cert-text"><strong>Date Earned:</strong> July 2024</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-
-<section class="ftco-section ftco-no-pb" id="experience-section">
-  <div class="container">
-    <div class="row justify-content-center pb-3">
-      <div class="col-md-10 text-center heading-section ftco-animate">
-        <h1 class="big big-2">Experience</h1>
-        <h2 class="mb-4">Professional Experience</h2>
-        <div class="underline"></div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <!-- Experience Section 1 -->
-        <div class="resume-wrap ftco-animate" style="color:aliceblue;">
-          <div class="row">
-            <div class="col-md-3">
-              <img src="images/pv-logo.jpg" class="img-fluid " alt="Company Logo">
+            <ul class="stack-tools"><li>Survival analysis</li><li>Predictive modeling</li><li>Model evaluation</li><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>CNN · RNN · LSTM</li><li>Generative AI</li><li>OpenCV</li></ul>
+          </article>
+          <article class="stack-row reveal">
+            <div class="stack-head">
+              <span class="stack-num">03</span>
+              <svg class="stack-ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 16a6 6 0 0 1 10.2-4.3L16 12.5l.8-.8A6 6 0 1 1 16.8 20.3L16 19.5l-.8.8A6 6 0 0 1 5 16Z"/></svg>
+              <div><h3>MLOps</h3><p>Taking models to production and keeping them healthy</p></div>
             </div>
-            <div class="col-md-9">
-              <span class="date">June 2025 - Present</span>
-              <h2>MLOps Engineer</h2>
-              <span class="position">Preston Ventures, LLC</span>
-              <p class="mt-4">
-                Preston Ventures is a leading asset manager focused on mortality-based financial products, such as life settlements, reverse mortgages, and other actuarial & longevity assets. </p>
-              <ul style="color: white;">
-                <li>Built a model evaluation suite (AUC, Brier Score, Integrated Brier Score) for survival and risk models,
-                  improving interpretability and decision confidence across healthcare and asset-intelligence workloads.</li>
-                <li>Implemented data quality monitoring across 30+ data assets using OpenMetadata and SQL-based
-                  validation checks, preventing data drift and ensuring consistent, high-quality training datasets.</li>
-                <li>Automated the model lifecycle on AWS (EKS, S3, Lambda) orchestrated with Airflow, enabling continuous
-                  retraining, experiment tracking, and scalable, reliable production rollouts.</li>
+            <ul class="stack-tools"><li>Kubernetes</li><li>Docker</li><li>Airflow</li><li>MLflow</li><li>GitHub Actions</li><li>ArgoCD</li><li>Prometheus</li><li>Grafana</li></ul>
+          </article>
+          <article class="stack-row reveal">
+            <div class="stack-head">
+              <span class="stack-num">04</span>
+              <svg class="stack-ic" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 24h15a5 5 0 0 0 .6-10A8 8 0 0 0 9.2 12.1 6 6 0 0 0 9 24Z"/></svg>
+              <div><h3>Cloud platforms</h3><p>Where the systems run</p></div>
+            </div>
+            <ul class="stack-tools"><li>AWS EKS</li><li>S3</li><li>Lambda</li><li>EC2</li><li>DynamoDB</li><li>Bedrock</li><li>SageMaker</li><li>Google Cloud</li><li>Terraform</li><li>AWS CDK</li></ul>
+          </article>
+          <article class="stack-row reveal">
+            <div class="stack-head">
+              <span class="stack-num">05</span>
+              <svg class="stack-ic" viewBox="0 0 32 32" aria-hidden="true"><ellipse cx="16" cy="8" rx="9" ry="3.5"/><path d="M7 8v16c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5V8M7 16c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5"/></svg>
+              <div><h3>Data &amp; databases</h3><p>Pipelines, storage and data quality</p></div>
+            </div>
+            <ul class="stack-tools"><li>PostgreSQL</li><li>BigQuery</li><li>DynamoDB</li><li>ETL pipelines</li><li>Feature engineering</li><li>OpenMetadata</li><li>Data quality</li></ul>
+          </article>
+          <article class="stack-row reveal">
+            <div class="stack-head">
+              <span class="stack-num">06</span>
+              <svg class="stack-ic" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="3"/><path d="m9 13 4 3-4 3M15 20h7"/></svg>
+              <div><h3>Linux &amp; systems</h3><p>The foundations underneath</p></div>
+            </div>
+            <ul class="stack-tools"><li>RHEL administration</li><li>Shell scripting</li><li>Networking</li><li>Performance tuning</li><li>Puppet</li><li>Git</li><li>Distributed systems</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Certifications -->
+    <section class="section" id="certifications" data-name="Certifications">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="sec-num">04</p>
+          <h2>Certifications</h2>
+        </header>
+        <div class="certs">
+          <a class="cert reveal" href="https://www.credly.com/badges/c537d230-cb79-4815-9e93-49afc63fbee4/public_url" target="_blank" rel="noopener">
+            <img src="assets/img/cert-gcp.webp" width="240" height="240" alt="" loading="lazy">
+            <span class="cert-issuer">Google Cloud</span>
+            <h3>Professional Cloud Architect</h3>
+            <span class="cert-meta"><time datetime="2025-01">January 2025</time><span class="cert-verify">Verify <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <a class="cert reveal" href="https://www.credly.com/badges/07e38be4-7538-4610-ae80-a6f2e312030a/public_url" target="_blank" rel="noopener">
+            <img src="assets/img/cert-terraform.webp" width="240" height="240" alt="" loading="lazy">
+            <span class="cert-issuer">HashiCorp</span>
+            <h3>Terraform Associate (003)</h3>
+            <span class="cert-meta"><time datetime="2025-02">February 2025</time><span class="cert-verify">Verify <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <div class="cert reveal">
+            <img src="assets/img/cert-oci.webp" width="240" height="235" alt="" loading="lazy">
+            <span class="cert-issuer">Oracle</span>
+            <h3>OCI 2023 Certified Foundations Associate</h3>
+            <span class="cert-meta"><time datetime="2024-07">July 2024</time></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · Experience -->
+    <section class="section" id="experience" data-name="Experience">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="sec-num">05</p>
+          <h2>Professional experience</h2>
+        </header>
+        <ol class="timeline">
+          <li class="job reveal">
+            <div class="job-when"><time datetime="2025-06">Jun 2025</time> – Present</div>
+            <article class="job-card">
+              <header>
+                <h3>MLOps Engineer</h3>
+                <p class="job-org">Preston Ventures, LLC <span>· Aliso Viejo, CA</span></p>
+              </header>
+              <ul class="job-points">
+                <li>Built a model evaluation suite (AUC, Brier Score, Integrated Brier Score) for survival and risk models, improving interpretability and decision confidence.</li>
+                <li>Implemented data-quality monitoring across 30+ data assets with OpenMetadata and SQL validation checks, keeping training data consistent and catching drift.</li>
+                <li>Automated the model lifecycle on AWS (EKS, S3, Lambda) with Airflow: continuous retraining, experiment tracking and reliable rollouts.</li>
               </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Experience Section 2 -->
-        <div class="resume-wrap ftco-animate" style="color: white;">
-          <div class="row">
-            <div class="col-md-3">
-              <img src="images/UCLogo.png" class="img-fluid " alt="Company Logo">
-            </div>
-            <div class="col-md-9">
-              <span class="date">June 2024 - June 2025</span>
-              <h2>MLOps Engineer</h2>
-              <span class="position">University Of Cincinnati</span>
-              <p class="mt-4">
-                The University of Cincinnati thrives on academic excellence, vibrant campus culture, and an innovative
-                spirit. </p>
-              <ul style="color: white;">
-                <li>Implemented machine learning models to analyze heart failure readmissions. Collaborating with the
-                  team to design and train a predictive model with 85% accuracy. Developed ETL pipelines for MIMIC-III
-                  dataset using PostgreSQL & Big Query.</li>
-                <li>Utilized Python, Postgres SQL and Google Big Query to clean, analyze, and model large datasets like
-                  MIMIC on cloud platforms, delivering valuable insights and improving outcomes, while also working in
-                  DevOps environments with Git and CI/CD pipelines.</li>
-                <li>Demonstrated commitment to continuous professional development by applying the latest machine
-                  learning & Deep Learning techniques and Cloud technologies to improve patient care strategies and
-                  streamlining development workflows.</li>
+              <ul class="chips chips-sm"><li>Python</li><li>SQL</li><li>AWS</li><li>Airflow</li><li>OpenMetadata</li></ul>
+            </article>
+          </li>
+          <li class="job reveal">
+            <div class="job-when"><time datetime="2024-06">Jun 2024</time> – <time datetime="2025-06">Jun 2025</time></div>
+            <article class="job-card">
+              <header>
+                <h3>MLOps Engineer</h3>
+                <p class="job-org">University of Cincinnati <span>· Cincinnati, OH</span></p>
+              </header>
+              <ul class="job-points">
+                <li>Designed and trained machine learning models that predict heart-failure readmissions, reaching 85% accuracy.</li>
+                <li>Built ETL pipelines for the MIMIC-III dataset with PostgreSQL and BigQuery to clean, analyze and model large clinical data.</li>
+                <li>Worked in Git and CI/CD workflows to move models from research toward deployment.</li>
               </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Experience Section 3 -->
-        <div class="resume-wrap ftco-animate" style="color: white;">
-          <div class="row">
-            <div class="col-md-3">
-              <img src="images/AmazonLogo.png" class="img-fluid company-image" alt="Company Logo">
-            </div>
-            <div class="col-md-9">
-              <span class="date">January 2023 - June 2023</span>
-              <h2>Application Engineer</h2>
-              <span class="position">Amazon</span>
-              <p class="mt-4">
-                An E-Commerce Company
-              </p>
-              <ul>
-                <li>Developed a real-time ticketing data processing application, to optimize internal processes by
-                  automating the detection and reporting of high-severity tickets, reducing manual effort for managers
-                  and improving operational excellence by 15%</li>
-                <li>Streamlined ticket management processes by implementing workflows for JSON data ingestion and
-                  storage in Amazon DynamoDB, enhancing team efficiency and collaborating with cross-functional teams to
-                  drive project completion</li>
-                <li>Automated the process of parsing data and sending detailed reports via email, enabling managers to
-                  quickly assess team performance without reviewing each ticket manually</li>
+              <ul class="chips chips-sm"><li>Python</li><li>PostgreSQL</li><li>BigQuery</li><li>scikit-learn</li><li>CI/CD</li></ul>
+            </article>
+          </li>
+          <li class="job reveal">
+            <div class="job-when"><time datetime="2023-01">Jan 2023</time> – <time datetime="2023-06">Jun 2023</time></div>
+            <article class="job-card">
+              <header>
+                <h3>Application Engineer</h3>
+                <p class="job-org">Amazon <span>· Chennai, India</span></p>
+              </header>
+              <ul class="job-points">
+                <li>Developed a real-time ticket-processing application that automatically detects and reports high-severity tickets, improving operational excellence by 15%.</li>
+                <li>Implemented JSON data ingestion and storage in Amazon DynamoDB, working with cross-functional teams to ship it.</li>
+                <li>Automated data parsing and emailed performance reports, so managers no longer had to review tickets one by one.</li>
               </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Experience Section 4 -->
-        <div class="resume-wrap ftco-animate" style="color: white;">
-          <div class="row">
-            <div class="col-md-3">
-              <img src="images/EduSkillsLogoTwo.png" class="img-fluid" alt="Logo" style="width: 140px; ">
-            </div>
-            <div class="col-md-9">
-              <span class="date">January 2022 - November 2022</span>
-              <h2>Cloud-DevOps Engineer</h2>
-              <span class="position">Eduskills Foundation</span>
-              <p class="mt-4">
-                EduSkills is a Non-profit organization which enables Industry 4.0 ready digital workforce in India.</p>
-              <ul>
-                <li>Acquired practical skills in RHEL system administration, configuration, management, troubleshooting,
-                  containerization, orchestration and enhancing proficiency in Linux server environments by successful
-                  completion of RH124 and RH134 course work.</li>
-                <li>Developed expertise in efficient Linux system administration while performance tuning and network
-                  configuration</li>
+              <ul class="chips chips-sm"><li>Java</li><li>AWS Lambda</li><li>DynamoDB</li><li>AWS CDK</li></ul>
+            </article>
+          </li>
+          <li class="job reveal">
+            <div class="job-when"><time datetime="2022-01">Jan 2022</time> – <time datetime="2022-11">Nov 2022</time></div>
+            <article class="job-card">
+              <header>
+                <h3>Cloud &amp; DevOps Engineer</h3>
+                <p class="job-org">EduSkills Foundation <span>· Hyderabad, India</span></p>
+              </header>
+              <ul class="job-points">
+                <li>Completed Red Hat RH124 and RH134, building hands-on RHEL administration, configuration, containerization and troubleshooting skills.</li>
+                <li>Practiced Linux performance tuning and network configuration for production-style server environments.</li>
               </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Experience Section 5 -->
-        <div class="resume-wrap ftco-animate" style="color: white;">
-          <div class="row">
-            <div class="col-md-3">
-              <img src="images/LWLogo.png" class="img-fluid company-image" alt="Company Logo">
-            </div>
-            <div class="col-md-9">
-              <span class="date">May 2021 - Aug 2021</span>
-              <h2>Machine Learning Engineer</h2>
-              <span class="position">Linux World Informatics Pvt. Ltd.</span>
-              <p class="mt-4">
-                Linux World offers the program of industrial training in Jaipur for those students who have a burning
-                desire for an IT career.
-              </p>
-              <ul>
-                <li>Acquired extensive hands-on experience in machine learning and deep learning concepts while gaining
-                  practical exposure to DevOps and Linux systems, and developed a deep learning model addressing a
-                  real-life problems.</li>
+              <ul class="chips chips-sm"><li>RHEL</li><li>Linux</li><li>Puppet</li><li>AWS</li></ul>
+            </article>
+          </li>
+          <li class="job reveal">
+            <div class="job-when"><time datetime="2021-05">May 2021</time> – <time datetime="2021-08">Aug 2021</time></div>
+            <article class="job-card">
+              <header>
+                <h3>Machine Learning Engineer</h3>
+                <p class="job-org">LinuxWorld Informatics Pvt. Ltd. <span>· Jaipur, India</span></p>
+              </header>
+              <ul class="job-points">
+                <li>Gained hands-on experience with machine learning, deep learning, DevOps and Linux.</li>
+                <li>Built and Dockerized a deep-learning classification model for a real-world problem (Project Dhruvikaar).</li>
               </ul>
+              <ul class="chips chips-sm"><li>Python</li><li>TensorFlow</li><li>Docker</li></ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 06 · Education -->
+    <section class="section" id="education" data-name="Education">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="sec-num">06</p>
+          <h2>Education</h2>
+        </header>
+        <div class="edu">
+          <article class="edu-card reveal">
+            <p class="edu-when"><time datetime="2024-01">Jan 2024</time> – <time datetime="2025-05">May 2025</time></p>
+            <h3>Master of Science, Information Technology</h3>
+            <p class="edu-school">University of Cincinnati · Cincinnati, OH</p>
+            <dl class="edu-meta"><div><dt>CGPA</dt><dd>4.0</dd></div><div><dt>Coursework</dt><dd>AI &amp; Machine Learning, Linux System Administration</dd></div></dl>
+          </article>
+          <article class="edu-card reveal">
+            <p class="edu-when"><time datetime="2019-08">Aug 2019</time> – <time datetime="2023-05">May 2023</time></p>
+            <h3>Bachelor of Technology, Information Technology</h3>
+            <p class="edu-school">Sreenidhi Institute of Science and Technology · Hyderabad, India</p>
+            <dl class="edu-meta"><div><dt>CGPA</dt><dd>3.5</dd></div><div><dt>Also</dt><dd>Robotics Club: mentor and TAB supervisor</dd></div></dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 · Projects -->
+    <section class="section" id="projects" data-name="Projects">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="sec-num">07</p>
+          <h2>Projects</h2>
+          <a class="sec-link" href="https://github.com/aithasahith02" target="_blank" rel="noopener">All repositories on GitHub <span aria-hidden="true">↗</span></a>
+        </header>
+
+        <div class="projects">
+          <article class="project reveal">
+            <ol class="flow" aria-label="Architecture"><li><span>Flask app</span></li><li><span>Prometheus</span></li><li><span>Controller</span></li><li class="hot"><span>RL agent</span></li></ol>
+            <h3>IntelliScale</h3>
+            <p class="project-sub">RL-driven cloud-native auto-scaling</p>
+            <p>A reinforcement-learning agent makes proactive scaling decisions from live CPU, memory and request-rate metrics, instead of reacting to fixed thresholds.</p>
+            <ul class="chips chips-sm"><li>Python</li><li>FastAPI</li><li>Docker</li><li>Prometheus</li><li>Grafana</li></ul>
+            <a class="project-link" href="https://github.com/aithasahith02/IntelliScale" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project reveal">
+            <ol class="flow" aria-label="Architecture"><li><span>Train</span></li><li><span>Docker</span></li><li><span>GitHub Actions</span></li><li class="hot"><span>ArgoCD → K8s</span></li></ol>
+            <h3>AutoMLOps</h3>
+            <p class="project-sub">Model-to-production MLOps pipeline</p>
+            <p>A model-agnostic template that trains, packages, deploys and monitors any ML model, with GitOps rollouts and live dashboards.</p>
+            <ul class="chips chips-sm"><li>scikit-learn</li><li>FastAPI</li><li>Kubernetes</li><li>ArgoCD</li><li>Grafana</li></ul>
+            <a class="project-link" href="https://github.com/aithasahith02/AutoMLOps" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project reveal">
+            <ol class="flow" aria-label="Architecture"><li><span>Terraform</span></li><li><span>AWS EKS</span></li><li><span>Docker Hub</span></li><li class="hot"><span>GitHub Actions</span></li></ol>
+            <h3>TeraKube</h3>
+            <p class="project-sub">Cloud-native CI/CD on AWS</p>
+            <p>Provisions a VPC and EKS cluster with Terraform, then builds and deploys a containerized app through GitHub Actions, and tears everything down to keep costs at zero.</p>
+            <ul class="chips chips-sm"><li>Terraform</li><li>AWS EKS</li><li>Docker</li><li>Kubernetes</li></ul>
+            <a class="project-link" href="https://github.com/aithasahith02/TeraKube" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project reveal">
+            <ol class="flow" aria-label="Architecture"><li><span>Street View</span></li><li><span>S3</span></li><li><span>ONNX on SageMaker</span></li><li class="hot"><span>JavaFX UI</span></li></ol>
+            <h3>CPASS</h3>
+            <p class="project-sub">Cincinnati public transportation accessibility</p>
+            <p>Scores the accessibility of 3,000+ Cincinnati bus stops from 30,000 street-view images, detecting shelters, benches, signage and pavement conditions.</p>
+            <ul class="chips chips-sm"><li>Roboflow</li><li>AWS SageMaker</li><li>Python</li><li>JavaFX</li></ul>
+            <a class="project-link" href="https://github.com/aithasahith02/Cincinnati-Public-Transportation-Accessibility-System" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project reveal">
+            <ol class="flow" aria-label="Architecture"><li><span>MIMIC-III</span></li><li><span>SQL</span></li><li><span>Features</span></li><li class="hot"><span>Readmission model</span></li></ol>
+            <h3>Heart-failure readmission</h3>
+            <p class="project-sub">Predictive analysis from EHR data</p>
+            <p>Predicts which heart-failure patients will be readmitted after discharge, giving clinicians earlier signals for care and hospital resource planning.</p>
+            <ul class="chips chips-sm"><li>Python</li><li>SQL</li><li>scikit-learn</li><li>pandas</li></ul>
+            <a class="project-link" href="https://github.com/aithasahith02/Predictive-analysis-of-Heart-Patients-Re-admission" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project reveal">
+            <ol class="flow" aria-label="Architecture"><li><span>EC2 metrics</span></li><li><span>AWS CLI</span></li><li><span>Clean</span></li><li class="hot"><span>LSTM forecast</span></li></ol>
+            <h3>Predictive cloud scaling</h3>
+            <p class="project-sub">Machine learning for resource forecasting</p>
+            <p>Collects EC2 CPU and network metrics every hour and trains an LSTM to forecast utilization, so scaling can happen before demand arrives.</p>
+            <ul class="chips chips-sm"><li>Python</li><li>LSTM</li><li>AWS EC2</li><li>Bash</li></ul>
+            <a class="project-link" href="https://github.com/aithasahith02/Predictive-Cloud-Resource-Scaling-using-machine-learning" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+
+        <h3 class="more-title reveal">More projects</h3>
+        <ul class="more reveal">
+          <li><a href="https://github.com/aithasahith02/Speech-Emotion-Recognition-usingDeepLearning" target="_blank" rel="noopener"><span class="more-name">Emotion recognition through speech signals</span><span class="more-desc">LSTM-CNN on MFCC features (RAVDESS) · published</span><span class="more-go" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/aithasahith02/CAPTCHA_RECOGNITION_USING_CNN" target="_blank" rel="noopener"><span class="more-name">Four-character CAPTCHA recognition</span><span class="more-desc">CNN computer-vision model · published</span><span class="more-go" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/aithasahith02/Dhruvikaar" target="_blank" rel="noopener"><span class="more-name">Project Dhruvikaar</span><span class="more-desc">Dockerized student-verification deep-learning model</span><span class="more-go" aria-hidden="true">↗</span></a></li>
+          <li><a href="https://drive.google.com/file/d/1WW1NClYKN2-U0gFtb9eGnkWCW3bmDmCg/view?usp=drive_link" target="_blank" rel="noopener"><span class="more-name">Potential to Sev2 Notifier</span><span class="more-desc">High-severity ticket alerting at Amazon · write-up</span><span class="more-go" aria-hidden="true">↗</span></a></li>
+          <li><div class="more-row"><span class="more-name">CI/CD with Jenkins on Kubernetes Engine</span><span class="more-desc">Jenkins pipelines on GKE</span><span class="more-go muted">No public repo</span></div></li>
+          <li><div class="more-row"><span class="more-name">Cloud Crafted: Kubernetes with Terraform</span><span class="more-desc">GKE provisioned with Terraform</span><span class="more-go muted">No public repo</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 08 · Contact -->
+    <section class="section contact" id="contact" data-name="Contact">
+      <div class="wrap">
+        <div class="contact-card reveal">
+          <div class="contact-copy">
+            <p class="sec-num">08</p>
+            <h2>Let's build something that <span>holds up.</span></h2>
+            <p>Hiring for MLOps or ML platform work, or want to talk about a project? Send a note and I'll reply by email.</p>
+            <ul class="contact-direct">
+              <li><a href="mailto:aithasahith0214@gmail.com">aithasahith0214@gmail.com</a></li>
+              <li><a href="https://www.linkedin.com/in/sahith-aitha-845887191/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/aithasahith02" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </div>
+
+          <!-- Web3Forms delivers each submission to Sahith's inbox. The access key is public by design. -->
+          <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" data-access-key="2c0c594a-c107-4532-bade-c9e8fa2588a5" novalidate>
+            <input type="hidden" name="subject" value="New message from sahithaitha.com">
+            <input type="hidden" name="from_name" value="sahithaitha.com">
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="field">
+              <label for="f-name">Name <span aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100">
+              <p class="err" id="e-name"></p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section class="projects-section ftco-section ftco-no-pb" id="projects-section">
-  <div class="container">
-    <div class="row justify-content-center pb-3">
-      <div class="col-md-10 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Projects</h1>
-        <h2 class="mb-4">Projects</h2>
-        <div class="underline"></div>
-      </div>
-    </div>
-  </div>
-
-<!-- Project Section -->
-<section>
-  <div class="container">
-    <div class="row">
-
-      <!-- Project 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/Predictive-analysis-of-Heart-Patients-Re-admission" target="_blank">
-              <img src="images/ProjectSixLogo.jpg" alt="Project 1 Image">
-            </a>
-            <h5 class="card-title">Predictive analysis of Heart Patients Re-admission</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/AutoMLOps" target="_blank">
-              <img src="images/AutoMLOps-Logo.jpeg" alt="Project 2 Image">
-            </a>
-            <h5 class="card-title">Model-to-Production MLOps Pipeline</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/IntelliScale" target="_blank">
-              <img src="images/IntelliScale-Logo.jpeg" alt="Project 3 Image">
-            </a>
-            <h5 class="card-title">IntelliScale - A Reinforcement Learning based Auto-scaling platform</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/TeraKube" target="_blank">
-              <img src="images/TeraKube-Logo.jpeg" alt="Project 4 Image">
-            </a>
-            <h5 class="card-title">TeraKube: Cloud-Native CI/CD Pipeline on AWS</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/Cincinnati-Public-Transportation-Accessibility-System" target="_blank">
-              <img src="images/CPASS_Logo.jpg" alt="Project 5 Image">
-            </a>
-            <h5 class="card-title">Cincinnati Public Transportation Accessibility System</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <img src="images/ProjectFive.png" alt="Project 6 Image">
-            <h5 class="card-title">CI/CD Pipeline with Jenkins on Kubernetes Engine</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 7 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <img src="images/projThreeLogo.jpeg" alt="Project 7 Image">
-            <h5 class="card-title">Cloud Crafted – Kubernetes with Terraform</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 8 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://drive.google.com/file/d/1WW1NClYKN2-U0gFtb9eGnkWCW3bmDmCg/view?usp=drive_link" target="_blank">
-              <img src="images/ProjectOneLogo.png" alt="Project 8 Image">
-            </a>
-            <h5 class="card-title">Potential To Sev2 Notifier</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 9 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/Predictive-Cloud-Resource-Scaling-using-machine-learning" target="_blank">
-              <img src="images/ProjectSevenLogo.png" alt="Project 9 Image">
-            </a>
-            <h5 class="card-title">Predictive Cloud Resource Scaling Using Machine Learning and DevOps</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 10 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/Speech-Emotion-Recognition-usingDeepLearning" target="_blank">
-              <img src="images/ProjectThreeLogo.jpg" alt="Project 10 Image">
-            </a>
-            <h5 class="card-title">Emotion Recognition Through Speech Signals</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 11 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/CAPTCHA_RECOGNITION_USING_CNN" target="_blank">
-              <img src="images/ProjectTwoLogo.png" alt="Project 11 Image">
-            </a>
-            <h5 class="card-title">Four Character CAPTCHA Recognition System</h5>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 12 -->
-      <div class="col-md-4 mb-4">
-        <div class="project-card">
-          <div class="card-body">
-            <a href="https://github.com/aithasahith02/Dhruvikaar" target="_blank">
-              <img src="images/ProjectFourLogo.png" alt="Project 12 Image">
-            </a>
-            <h5 class="card-title">Project Dhruvikaar</h5>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <section class="ftco-section ftco-no-pb" id="education-section">
-    <div class="container">
-      <div class="row justify-content-center pb-3">
-        <div class="col-md-10 text-center heading-section ftco-animate">
-          <h1 class="big big-2">Education</h1>
-          <h2 class="mb-4">Academic Background</h2>
-          <div class="underline"></div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <!-- Education Section 1 -->
-          <div class="education-wrap ftco-animate" style="margin-bottom: 0%;">
-            <div class="row">
-              <div class="col-md-3">
-                <img src="images/UCLogo.png" class="img-fluid" alt="University Logo">
+            <div class="field-row">
+              <div class="field">
+                <label for="f-email">Email <span aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="150">
+                <p class="err" id="e-email"></p>
               </div>
-              <div class="col-md-9">
-                <span class="date">January 2024 - May 2025</span>
-                <h2>Master's in Information Technology</h2>
-                <span class="institution">University of Cincinnati</span>
-                <p class="mt-4">Current CGPA : 4.0</p>
+              <div class="field">
+                <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="30" pattern="[0-9+()\-.\s]{7,30}">
+                <p class="err" id="e-phone"></p>
               </div>
             </div>
-          </div>
-          <div class="verticalline"></div>
-
-          <!-- Education Section 2 -->
-          <div class="education-wrap ftco-animate">
-            <div class="row">
-              <div class="col-md-3">
-                <img src="images/SnistLogo.png" class="img-fluid" alt="University Logo">
-              </div>
-              <div class="col-md-9">
-                <span class="date">August 2019 - May 2023</span>
-                <h2>Bachelor's in Information Technology</h2>
-                <span class="institution">Sreenidhi Institute of Science and Technology</span>
-                <p class="mt-4">CGPA : 3.5</p>
-              </div>
+            <div class="field">
+              <label for="f-message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="f-message" name="message" rows="5" required minlength="10" maxlength="1000"></textarea>
+              <p class="hint"><span class="err" id="e-message"></span><span id="count">0 / 1000</span></p>
             </div>
-          </div>
+            <button class="btn btn-solid btn-send" type="submit"><span class="send-label">Send message</span><span class="spinner" aria-hidden="true"></span></button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <span>© <span id="year">2026</span> Sahith Aitha</span>
+      <span>Built by hand, hosted on GitHub Pages</span>
+      <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
     </div>
-  </section>
-
-  <section class="ftco-section ftco-no-pb" id="contact-section">
-    <div class="container">
-      <div class="row justify-content-center pb-3">
-        <div class="col-md-10 text-center heading-section ftco-animate">
-          <h1 class="big big-2">Get in Touch</h1>
-          <h2 class="mb-4">Contact me</h2>
-          <div class="underline"></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Contact Information Column -->
-        <div class="col-md-6">
-          <div class="contact-info ftco-animate">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
-                  <p>
-                    <i class="icon-map-marker"></i>
-                    United States of America
-                  </p>
-                </div>
-                <div class="info-box">
-                  <p>
-                    <i class="icon-phone"></i>
-                    +1 513-328-2956
-                  </p>
-                </div>
-                <div class="info-box">
-                  <p>
-                    <i class="icon-envelope"></i>
-                    aithasahith0214@gmail.com
-                  </p>
-                </div>
-                <div class="info-box">
-                  <p>
-                    <i class="icon-linkedin"></i>
-                    <a style="color: white;" href="https://www.linkedin.com/in/sahith-aitha-845887191/"
-                      target="_blank">Linkedin</a>
-                  </p>
-                </div>
-                <div class="info-box">
-                  <p>
-                    <i class="icon-trophy"></i>
-                    <a style="color: white;" href="https://www.credly.com/users/sahith-aitha" target="_blank">Credly</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Logo Column -->
-        <div class="col-md-6">
-          <div class="contact-logo ftco-animate text-center">
-            <img src="images/ContactIcon.png" alt="Contact Logo" class="img" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
-    </svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/main.js"></script>
-
-  </body>
-
+  </footer>
+</body>
 </html>
