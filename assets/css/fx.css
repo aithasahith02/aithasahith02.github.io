@@ -1,0 +1,109 @@
+/* ==========================================================================
+   fx add-on: liquid glass, a fluid blob behind the portrait, and motion details.
+   It only layers on top of site.css. Remove this file and assets/js/fx.js to
+   switch everything off; adding class "no-fx" to <html> disables it at runtime.
+   ========================================================================== */
+
+:root {
+  --fx: 1;
+  --glass-tint: rgba(255, 255, 255, .55);
+  --glass-edge: rgba(255, 255, 255, .8);
+  --glass-hi: rgba(255, 255, 255, .95);
+  --glass-shade: rgba(15, 26, 42, .12);
+  --glare: rgba(255, 255, 255, .45);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --glass-tint: rgba(255, 255, 255, .07); --glass-edge: rgba(255, 255, 255, .14); --glass-hi: rgba(255, 255, 255, .22); --glass-shade: rgba(0, 0, 0, .45); --glare: rgba(255, 255, 255, .07); }
+}
+:root[data-theme="dark"] { --glass-tint: rgba(255, 255, 255, .07); --glass-edge: rgba(255, 255, 255, .14); --glass-hi: rgba(255, 255, 255, .22); --glass-shade: rgba(0, 0, 0, .45); --glare: rgba(255, 255, 255, .07); }
+
+/* ---------- liquid glass surfaces ---------- */
+:root:not(.no-fx) :is(.topbar.is-scrolled, .hero .eyebrow, .hero-links .btn:not(.btn-solid), .icon-btn) {
+  background: linear-gradient(140deg, var(--glass-tint), color-mix(in srgb, var(--glass-tint) 35%, transparent));
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border-color: var(--glass-edge);
+  box-shadow: inset 0 1px 0 var(--glass-hi), inset 0 -1px 1px var(--glass-shade), 0 10px 30px -16px var(--glass-shade);
+}
+:root:not(.no-fx) .topbar.is-scrolled { box-shadow: inset 0 -1px 0 var(--glass-edge), 0 10px 30px -20px var(--glass-shade); }
+
+/* a light sheen slides across glass controls on hover */
+:root:not(.no-fx) :is(.btn, .menu-btn, .icon-btn) { position: relative; overflow: hidden; isolation: isolate; transition: transform .25s var(--ease), translate .35s var(--ease), border-color .25s, background-color .25s, color .25s; }
+:root:not(.no-fx) :is(.hero-links .btn, .icon-btn, .menu-btn)::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, .5) 50%, transparent 65%);
+  transform: translateX(-130%); transition: transform .9s var(--ease);
+}
+:root:not(.no-fx) :is(.hero-links .btn, .icon-btn, .menu-btn):hover::after { transform: translateX(130%); }
+
+/* water ripple from the click point (element added by fx.js) */
+.fx-ripple { position: absolute; z-index: -1; border-radius: 50%; pointer-events: none; background: currentColor; opacity: .22; transform: scale(0); animation: fx-ripple .75s var(--ease) forwards; }
+@keyframes fx-ripple { to { transform: scale(1); opacity: 0; } }
+
+/* ---------- fluid blob behind the portrait ---------- */
+:root:not(.no-fx) .blob {
+  display: block; position: absolute; inset: -8% -10% -6% -8%; z-index: 0; pointer-events: none;
+  translate: var(--bx, 0px) var(--by, 0px); transition: translate 1.4s var(--ease);
+}
+:root:not(.no-fx) .blob::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 28% 24%, color-mix(in srgb, var(--flare) 55%, #fff) 0%, transparent 42%),
+    radial-gradient(circle at 70% 80%, color-mix(in srgb, var(--flare) 70%, var(--ink)) 0%, transparent 55%),
+    var(--flare);
+  border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+  opacity: .85;
+  animation: fx-morph 16s ease-in-out infinite;
+}
+:root:not(.no-fx) .blob span { /* a glass droplet riding the blob */
+  position: absolute; right: -7%; top: 4%; width: 24%; aspect-ratio: 1; border-radius: 50%; z-index: 2;
+  background: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, .85), rgba(255, 255, 255, .15) 40%, rgba(255, 255, 255, .05) 70%);
+  -webkit-backdrop-filter: blur(6px) saturate(170%); backdrop-filter: blur(6px) saturate(170%);
+  box-shadow: inset 0 -6px 14px rgba(255, 255, 255, .25), inset 0 2px 1px rgba(255, 255, 255, .7), 0 14px 28px -12px rgba(15, 26, 42, .35);
+  animation: fx-morph 11s ease-in-out infinite reverse, fx-bob 7s ease-in-out infinite;
+}
+.hero-visual .portrait { z-index: 1; }
+:root:not(.no-fx) .blob { z-index: auto; }
+:root:not(.no-fx) .blob::before { z-index: 0; }
+@media (max-width: 1100px) { :root:not(.no-fx) .blob { inset: -5% -6% -4% -5%; } :root:not(.no-fx) .blob span { right: -3%; width: 20%; } }
+@media (max-width: 860px) { :root:not(.no-fx) .blob span { display: none; } }
+@keyframes fx-morph {
+  0%, 100% { border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%; rotate: 0deg; }
+  33% { border-radius: 63% 37% 38% 62% / 57% 61% 39% 43%; rotate: 6deg; }
+  66% { border-radius: 35% 65% 52% 48% / 38% 52% 48% 62%; rotate: -4deg; }
+}
+@keyframes fx-bob { 50% { translate: -6% -10%; } }
+
+/* ---------- section headings rise word by word (spans added by fx.js) ---------- */
+:root:not(.no-fx) .sec-head h2 .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .1em; margin-bottom: -.1em; }
+:root:not(.no-fx) .sec-head h2 .w > span { display: inline-block; transform: translateY(108%); transition: transform 1s var(--ease); transition-delay: calc(140ms + var(--wi, 0) * 80ms); }
+:root:not(.no-fx) .sec-head.is-in h2 .w > span, .no-js .sec-head h2 .w > span { transform: none; }
+
+/* ---------- cards tilt toward the pointer, with a soft glare ---------- */
+:root:not(.no-fx) :is(.project, .cert).is-in {
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--ty, 0px));
+  transition: transform .5s var(--ease), border-color .35s, box-shadow .35s, opacity .8s var(--ease);
+}
+:root:not(.no-fx) :is(.project:hover, a.cert:hover) { --ty: -5px; }
+:root:not(.no-fx) :is(.project, .cert)::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(420px circle at var(--gx, 50%) var(--gy, 0%), var(--glare), transparent 45%);
+  opacity: 0; transition: opacity .4s;
+}
+:root:not(.no-fx) :is(.project, a.cert):hover::before { opacity: 1; }
+
+/* ---------- theme switch: new theme spreads from the toggle ---------- */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-new(root) { animation: fx-theme .75s cubic-bezier(.7, 0, .2, 1) both; }
+@keyframes fx-theme {
+  from { clip-path: circle(0 at var(--vt-x, 50%) var(--vt-y, 0)); }
+  to { clip-path: circle(150vmax at var(--vt-x, 50%) var(--vt-y, 0)); }
+}
+
+/* ---------- respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  :root:not(.no-fx) .blob::before, :root:not(.no-fx) .blob span { animation: none; }
+  :root:not(.no-fx) .sec-head h2 .w > span { transform: none; transition: none; }
+  :root:not(.no-fx) :is(.hero-links .btn, .icon-btn, .menu-btn)::after { display: none; }
+  .fx-ripple { display: none; }
+}
