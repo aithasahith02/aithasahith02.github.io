@@ -242,15 +242,15 @@ a.cert:hover img { transform: rotate(-6deg) scale(1.06); }
 
 /* ---------- experience timeline ---------- */
 .timeline { position: relative; display: grid; gap: 18px; }
-.timeline::before { content: ""; position: absolute; left: 172px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+.timeline::before { content: ""; position: absolute; left: 200px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
 .timeline::after { /* filled part of the rail, scaled from JS */
-  content: ""; position: absolute; left: 172px; top: 8px; bottom: 8px; width: 2px; background: var(--flare);
+  content: ""; position: absolute; left: 200px; top: 8px; bottom: 8px; width: 2px; background: var(--flare);
   transform-origin: 50% 0; transform: scaleY(var(--tl, 1));
 }
-.job { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 0 44px; position: relative; }
-.job::before { content: ""; position: absolute; left: 166px; top: 26px; width: 14px; height: 14px; border-radius: 50%; background: var(--ground); border: 2.5px solid var(--flare); z-index: 1; transition: background-color .3s, transform .3s var(--ease); }
+.job { display: grid; grid-template-columns: 178px minmax(0, 1fr); gap: 0 44px; position: relative; }
+.job::before { content: ""; position: absolute; left: 194px; top: 26px; width: 14px; height: 14px; border-radius: 50%; background: var(--ground); border: 2.5px solid var(--flare); z-index: 1; transition: background-color .3s, transform .3s var(--ease); }
 .job:hover::before { background: var(--flare); transform: scale(1.2); }
-.job-when { padding-top: 24px; text-align: right; line-height: 1.6; }
+.job-when { padding-top: 24px; text-align: right; line-height: 1.6; white-space: nowrap; }
 .job-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; display: grid; gap: 14px; transition: border-color .3s, transform .35s var(--ease); }
 .job:hover .job-card { border-color: var(--ink-2); transform: translateX(4px); }
 .job-card h3 { font: 700 24px/1.15 var(--font-display); letter-spacing: -.02em; }
